@@ -21,9 +21,8 @@
 
 ### 1.1 Algoritmo Principal
 
-| Campo | Resposta |
-|-------|----------|
 | Algoritmo A* (A-Estrela) | |
+|-------|----------|
 | Categoria | Busca |
 | Complexidade de tempo | O(b^d) |
 | Complexidade de espaço | O(V) |
