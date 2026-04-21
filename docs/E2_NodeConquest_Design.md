@@ -9,6 +9,7 @@
 ## Identificação do Grupo
 
 | Grupo: Node Conquest | |
+|-------|----------|
 | [Repositório GitHub](https://github.com/Luis-Hardt/Node-Conquest.git) | |
 | Bruna Alves de Jesus | 40420418 |
 | Luis Fernando Barcelos Hardt | 38774631 |
