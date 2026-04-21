@@ -65,7 +65,7 @@ A utilização de grafos permite tratar o mapa hexagonal como um conjunto de vé
 
 ## 7. Diagrama Conceitual
 
-![Diagrama conceitual](./E1_NodeConquest_DiagramaConceitual.jpg)
+![Diagrama conceitual](./docs/E1_NodeConquest_DiagramaConceitual.jpg)
 
 **Legenda:** Representação do mapa hexagonal. O caminho em vermelho ilustra a rota de menor custo calculada pelo algoritmo, desviando de obstáculos (células pretas) e priorizando terrenos com menor custo de movimento. As células possuem pesos que podem ser cumulativos dependendo do terreno: as de custo 1 representam planícies, as de custo 2 representam colinas ou florestas, e as de custo 3 representam lagos ou áreas onde colinas e florestas estão presentes simultâneamente.
 
