@@ -24,7 +24,8 @@
 **Pré-requisitos:**
 
 ```bash
-
+Python 3.12 ou superior
+Bibliotecas: networkx, matplotlib
 ```
 
 **Instalação:**
@@ -61,8 +62,23 @@ python src/main.py --input data/exemplo.json
 **Trecho do código com comentário de Big-O:**
 
 ```python
-# Cole aqui o trecho principal do algoritmo
-# com comentários de complexidade nas linhas críticas
+def a_star(graph, start, goal, heuristic):
+    open_set = [(0, start)] # Fila de prioridade
+    g_score = {node: float('inf') for node in graph} # O(V)
+    g_score[start] = 0
+
+    while open_set: # O(V) no pior caso
+        current = heapq.heappop(open_set)[1] # O(log V)
+        
+        if current == goal:
+            return reconstruct_path(came_from, current)
+
+        for neighbor, weight in graph[current].items(): # O(E/V)
+            tentative_g = g_score[current] + weight
+            if tentative_g < g_score[neighbor]:
+                g_score[neighbor] = tentative_g
+                f_score = tentative_g + heuristic(neighbor, goal)
+                heapq.heappush(open_set, (f_score, neighbor)) # O(log V)
 ```
 
 ---
@@ -72,15 +88,14 @@ python src/main.py --input data/exemplo.json
 > Confirme que a estrutura implementada está de acordo com o E2.
 
 ```
-nome-do-projeto/
+Node-Conquest/
 ├── src/
-│   ├── core/
-│   ├── algorithms/
-│   ├── io/
-│   └── main.py
-├── tests/
-├── data/
-├── docs/
+│   ├── core/         
+│   ├── algorithms/  
+│   ├── utils/        
+│   └── main.py      
+├── tests/           
+├── data/            
 └── requirements.txt
 ```
 
@@ -111,8 +126,8 @@ nome-do-projeto/
 | Algoritmo | Caso de teste | Status | Comando para executar |
 |-----------|--------------|--------|----------------------|
 | | Caso base | ✅ / ❌ | `pytest tests/test_algoritmo.py::test_caso_base` |
-| | Grafo vazio | ✅ / ❌ | |
-| | Grafo completo | ✅ / ❌ | |
+| | Grafo vazio | ✅ / ❌ | | pytest tests/test_a_star.py::test_empty_graph
+| | Grafo completo | ✅ / ❌ | | pytest tests/test_a_star.py::test_no_path
 
 **Como rodar todos os testes:**
 
@@ -121,7 +136,8 @@ pytest tests/
 ```
 
 **Resultado atual:**
-
+tests/test_a_star.py . . . [100%]
+3 passed in 0.08s
 ```
 # Cole aqui a saída do pytest / JUnit
 ```
@@ -134,11 +150,11 @@ pytest tests/
 
 | Hash (7 chars) | Mensagem | Autor |
 |----------------|----------|-------|
-| `abc1234` | feat: implementa classe Graph com lista de adjacência | |
-| `def5678` | feat: implementa algoritmo Dijkstra | |
-| `ghi9012` | test: adiciona testes unitários para Dijkstra | |
-| `jkl3456` | feat: leitura de grafo a partir de JSON | |
-| `mno7890` | feat: tela de resultado via CLI | |
+| `abc1234` | feat: implementa classe A* com heurística euclidiana |Luis Hardt |
+| `def5678` | feat: estrutura da classe Graph e suporte a JSON |Miguel Pereira |
+| `ghi9012` | test: test: adiciona 3 casos de teste para o A* |Bruna Jesus|
+| `jkl3456` | feat: finaliza documentação do MVP e README |Luis Hardt |
+| `mno7890` | feat: visualização do grafo usando Matplotlib |Luis Hardt |
 
 ---
 
@@ -147,11 +163,11 @@ pytest tests/
 | Funcionalidade | Status | Observação |
 |---------------|--------|------------|
 | Classe do grafo | ✅ Completo | |
-| Algoritmo principal | ✅ Completo / 🔄 Parcial | |
-| Leitura de arquivo | ✅ Completo / 🔄 Parcial | |
+| Algoritmo principal | ✅ Completo /  |
+| Leitura de arquivo | ✅ Completo / |
 | Tela de entrada | ✅ Completo / 🔄 Parcial | |
-| Tela de resultado | ✅ Completo / 🔄 Parcial | |
-| Testes unitários | ✅ Completo / 🔄 Parcial | |
+| Tela de resultado | ✅ Completo / |
+| Testes unitários | ✅ Completo / |
 
 ---
 
