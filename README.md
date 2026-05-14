@@ -46,7 +46,8 @@ Mapa Hexagonal Dinâmico: Geração de grade baseada em grafos com pesos de movi
 
 ## 🛠️ Estrutura do Projeto
 
-node-conquest-terrarium/
+```
+Node-Conquest/
 ├── docs/
 │   ├── E1_NodeConquest_Visao.md
 │   ├── E2_NodeConquest_Design.md
@@ -68,6 +69,7 @@ node-conquest-terrarium/
 ├── LICENSE
 ├── README.md
 └── requirements.txt          # Dependência: Pygame
+```
 
 ---
 
