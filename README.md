@@ -6,17 +6,23 @@ Node Conquest é um jogo de estratégia por turnos desenvolvido em Python utiliz
 ## 🚀 Funcionalidades Atuais
 Mapa Hexagonal Dinâmico: Geração de grade baseada em grafos com pesos de movimentação variados (custo de 1 a 3).
 
-### Sistema de Câmera Automática: O renderizador calcula as dimensões do mapa e centraliza a visualização automaticamente na tela.
+### Sistema de Câmera Automática:
+O renderizador calcula as dimensões do mapa e centraliza a visualização automaticamente na tela.
 
-### Algoritmo A (A-Star): Implementação de busca de caminho inteligente para movimentação dos jogadores e das IAs.
+### Algoritmo A (A-Star):
+Implementação de busca de caminho inteligente para movimentação dos jogadores e das IAs.
 
-### Gestão de Território: Sistema que detecta quando um nó é capturado e atualiza as cores e pontuações em tempo real.
+### Gestão de Território:
+Sistema que detecta quando um nó é capturado e atualiza as cores e pontuações em tempo real.
 
-### Inteligência Artificial: Oponentes que tomam decisões e se movimentam automaticamente durante seus turnos.
+### Inteligência Artificial:
+Oponentes que tomam decisões e se movimentam automaticamente durante seus turnos.
 
-### Interface de Usuário (UI): Menu principal, tutorial integrado, cards de status dos jogadores e botão de encerrar turno.
+### Interface de Usuário (UI):
+Menu principal, tutorial integrado, cards de status dos jogadores e botão de encerrar turno.
 
-### Condição de Vitória: O jogo detecta automaticamente quando todos os nós foram dominados, declarando o vencedor com base na pontuação.
+### Condição de Vitória:
+O jogo detecta automaticamente quando todos os nós foram dominados, declarando o vencedor com base na pontuação.
 
 ---
 
