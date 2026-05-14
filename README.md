@@ -87,7 +87,7 @@ Pygame 2.5.0>
 
 ---
 
-### Como Jogar
+### ⚙️ Como Rodar o Jogo
 
 Use o seguintes comandos:
 
