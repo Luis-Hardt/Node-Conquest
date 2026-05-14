@@ -88,13 +88,19 @@ Use o seguintes comandos:
 
 1. Clone o repositório:
 
-`git clone https://github.com/Luis-Hardt/Node-Conquest.git`
+```
+git clone https://github.com/Luis-Hardt/Node-Conquest.git
+```
 
 2. Instale as dependências:
 
-`pip install requirements.txt`
+```
+pip install requirements.txt
+```
 
 3. Inicialise main.py:
 
-`cd src`
-`python main.py`
+```
+cd src
+python main.py
+```
