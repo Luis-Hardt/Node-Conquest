@@ -83,9 +83,8 @@ Node-Conquest/
 
 Python 3.x
 
-Pygame CE (ou Pygame standard)
+Pygame 2.5.0>
 
-Para 
 ---
 
 ### Como Jogar
